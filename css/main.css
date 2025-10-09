@@ -14,8 +14,8 @@
     --color-black-heavy: #000000;
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
-    --color-primary: #ffbf00;
-    --color-secondary: #fff2cc;
+    --color-primary: #F68829;
+    --color-secondary: #EF3632;
     --color-white: #ffffff;
     --color-red: #e74c3c;
     --color-green: #2ecc71;
@@ -145,7 +145,7 @@ a.navbar-brand {
     height: 450px;
     width: 450px;
     border-radius: 170px;
-    background-color: #f4c949;
+    background-color: var(--color-primary);
     position: absolute;
     right: 0;
     top: -80px;
