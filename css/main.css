@@ -41,6 +41,10 @@ b {
     color: var(--color-primary);
 }
 
+.color-secondary {
+    color: var(--color-secondary);
+}
+
 a.navbar-brand {
     margin-left: -25px;
 }
