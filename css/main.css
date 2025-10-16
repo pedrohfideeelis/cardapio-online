@@ -145,7 +145,7 @@ a.navbar-brand {
     height: 450px;
     width: 450px;
     border-radius: 170px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     position: absolute;
     right: 0;
     top: -80px;
