@@ -11,6 +11,7 @@ var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 7.5;
 
 var CELULAR_EMPRESA = '5517991234567';
+var CATEGORIAS_SEM_VERMAIS = ['linhaGourmet', 'combosEspeciais'];
 
 cardapio.eventos = {
 
@@ -32,7 +33,13 @@ cardapio.metodos = {
 
         if (!vermais) {
             $("#itensCardapio").html('');
-            $("#btnVerMais").removeClass('hidden');
+
+            if (CATEGORIAS_SEM_VERMAIS.includes(categoria)) {
+                $("#btnVerMais").addClass('hidden');
+            }
+            else {
+                $("#btnVerMais").removeClass('hidden');
+            }
         }
 
         $.each(filtro, (i, e) => {
