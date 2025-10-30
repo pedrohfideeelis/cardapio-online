@@ -456,7 +456,7 @@ a.navbar-brand {
 }
 
 footer {
-    background-color: var(--color-secondary);
+    background-color: var(--color-background);
 }
 
 .logo-footer {
