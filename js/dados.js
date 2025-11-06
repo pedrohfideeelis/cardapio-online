@@ -226,7 +226,7 @@ var MENU = {
     {
       id: "combos-especiais-5-marmitas",
       img: "./img/cardapio/combo-marmitas.png",
-      name: "Combo 5 marmitas",
+      name: "Combo 5 Marmitas",
       dsc: "Combos Especiais",
       price: 99.9,
     },
