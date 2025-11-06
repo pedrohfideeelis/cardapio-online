@@ -9,7 +9,7 @@ var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
 
-var CELULAR_EMPRESA = '5517991234567';
+var CELULAR_EMPRESA = '5511940542840';
 var CATEGORIAS_SEM_VERMAIS = ['linhaGourmet', 'combosEspeciais'];
 
 cardapio.eventos = {
