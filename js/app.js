@@ -8,9 +8,9 @@ var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = 7.5;
 
 var CELULAR_EMPRESA = '5517991234567';
+var CATEGORIAS_SEM_VERMAIS = ['linhaGourmet', 'combosEspeciais'];
 
 cardapio.eventos = {
 
@@ -32,7 +32,13 @@ cardapio.metodos = {
 
         if (!vermais) {
             $("#itensCardapio").html('');
-            $("#btnVerMais").removeClass('hidden');
+
+            if (CATEGORIAS_SEM_VERMAIS.includes(categoria)) {
+                $("#btnVerMais").addClass('hidden');
+            }
+            else {
+                $("#btnVerMais").removeClass('hidden');
+            }
         }
 
         $.each(filtro, (i, e) => {
@@ -313,26 +319,25 @@ cardapio.metodos = {
 
     },
 
-    // carrega os valores de SubTotal, Entrega e Total
+    // carrega o valor total do carrinho
     carregarValores: () => {
 
         VALOR_CARRINHO = 0;
-
-        $("#lblSubTotal").text('R$ 0,00');
-        $("#lblValorEntrega").text('+ R$ 0,00');
-        $("#lblValorTotal").text('R$ 0,00');
 
         $.each(MEU_CARRINHO, (i, e) => {
 
             VALOR_CARRINHO += parseFloat(e.price * e.qntd);
 
-            if ((i + 1) == MEU_CARRINHO.length) {
-                $("#lblSubTotal").text(`R$ ${VALOR_CARRINHO.toFixed(2).replace('.', ',')}`);
-                $("#lblValorEntrega").text(`+ R$ ${VALOR_ENTREGA.toFixed(2).replace('.', ',')}`);
-                $("#lblValorTotal").text(`R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}`);
-            }
-
         })
+
+        const total = VALOR_CARRINHO;
+        const textoTotal = `R$ ${total.toFixed(2).replace('.', ',')}`;
+
+        cardapio.metodos.atualizarCampoTexto('#lblValorTotal', textoTotal);
+
+        if (MEU_CARRINHO.length === 0) {
+            cardapio.metodos.atualizarCampoTexto('#lblValorTotal', 'R$ 0,00');
+        }
 
     },
 
@@ -352,7 +357,8 @@ cardapio.metodos = {
     buscarCep: () => {
 
         // cria a variavel com o valor do cep
-        var cep = $("#txtCEP").val().trim().replace(/\D/g, '');
+        var cep = cardapio.metodos.obterValorInput("#txtCEP").replace(/\D/g, '');
+        cardapio.metodos.atualizarCampoValor("#txtCEP", cep);
 
         // verifica se o CEP possui valor informado
         if (cep != "") {
@@ -367,16 +373,15 @@ cardapio.metodos = {
                     if (!("erro" in dados)) {
 
                         // Atualizar os campos com os valores retornados
-                        $("#txtEndereco").val(dados.logradouro);
-                        $("#txtBairro").val(dados.bairro);
-                        $("#txtCidade").val(dados.localidade);
-                        $("#ddlUf").val(dados.uf);
-                        $("#txtNumero").focus();
+                        cardapio.metodos.atualizarCampoValor("#txtEndereco", dados.logradouro);
+                        cardapio.metodos.atualizarCampoValor("#txtBairro", dados.bairro);
+
+                        cardapio.metodos.focarCampo("#txtNumero");
 
                     }
                     else {
                         cardapio.metodos.mensagem('CEP não encontrado. Preencha as informações manualmente.');
-                        $("#txtEndereco").focus();
+                        cardapio.metodos.focarCampo("#txtEndereco");
                     }
 
                 })
@@ -384,13 +389,13 @@ cardapio.metodos = {
             }
             else {
                 cardapio.metodos.mensagem('Formato do CEP inválido.');
-                $("#txtCEP").focus();
+                cardapio.metodos.focarCampo("#txtCEP");
             }
 
         }
         else {
             cardapio.metodos.mensagem('Informe o CEP, por favor.');
-            $("#txtCEP").focus();
+            cardapio.metodos.focarCampo("#txtCEP");
         }
 
     },
@@ -398,59 +403,49 @@ cardapio.metodos = {
     // validação antes de prosseguir para a etapa 3
     resumoPedido: () => {
 
-        let cep = $("#txtCEP").val().trim();
-        let endereco = $("#txtEndereco").val().trim();
-        let bairro = $("#txtBairro").val().trim();
-        let cidade = $("#txtCidade").val().trim();
-        let uf = $("#ddlUf").val().trim();
-        let numero = $("#txtNumero").val().trim();
-        let complemento = $("#txtComplemento").val().trim();
+        const camposEndereco = [
+            { chave: 'cep', seletor: '#txtCEP', mensagem: 'Informe o CEP, por favor.', obrigatorio: true },
+            { chave: 'endereco', seletor: '#txtEndereco', mensagem: 'Informe o Endereço, por favor.', obrigatorio: true },
+            { chave: 'bairro', seletor: '#txtBairro', mensagem: 'Informe o Bairro, por favor.', obrigatorio: true },
+            { chave: 'numero', seletor: '#txtNumero', mensagem: 'Informe o Número, por favor.', obrigatorio: true },
+            { chave: 'complemento', seletor: '#txtComplemento', obrigatorio: false }
+        ];
 
-        if (cep.length <= 0) {
-            cardapio.metodos.mensagem('Informe o CEP, por favor.');
-            $("#txtCEP").focus();
+        const endereco = {};
+        let possuiCampoObrigatorio = false;
+
+        for (const campo of camposEndereco) {
+            const elemento = $(campo.seletor);
+
+            if (!elemento.length) {
+                continue;
+            }
+
+            if (campo.obrigatorio) {
+                possuiCampoObrigatorio = true;
+            }
+
+            const valor = cardapio.metodos.obterValorInput(campo.seletor);
+
+            if (campo.obrigatorio && valor.length <= 0) {
+                if (campo.mensagem) {
+                    cardapio.metodos.mensagem(campo.mensagem);
+                }
+                cardapio.metodos.focarCampo(campo.seletor);
+                return;
+            }
+
+            if (valor.length > 0) {
+                endereco[campo.chave] = valor;
+            }
+        }
+
+        if (Object.keys(endereco).length === 0 && possuiCampoObrigatorio) {
+            cardapio.metodos.mensagem('Informe os dados de entrega, por favor.');
             return;
         }
 
-        if (endereco.length <= 0) {
-            cardapio.metodos.mensagem('Informe o Endereço, por favor.');
-            $("#txtEndereco").focus();
-            return;
-        }
-
-        if (bairro.length <= 0) {
-            cardapio.metodos.mensagem('Informe o Bairro, por favor.');
-            $("#txtBairro").focus();
-            return;
-        }
-
-        if (cidade.length <= 0) {
-            cardapio.metodos.mensagem('Informe a Cidade, por favor.');
-            $("#txtCidade").focus();
-            return;
-        }
-
-        if (uf == "-1") {
-            cardapio.metodos.mensagem('Informe a UF, por favor.');
-            $("#ddlUf").focus();
-            return;
-        }
-
-        if (numero.length <= 0) {
-            cardapio.metodos.mensagem('Informe o Número, por favor.');
-            $("#txtNumero").focus();
-            return;
-        }
-
-        MEU_ENDERECO = {
-            cep: cep,
-            endereco: endereco,
-            bairro: bairro,
-            cidade: cidade,
-            uf: uf,
-            numero: numero,
-            complemento: complemento
-        }
+        MEU_ENDERECO = endereco;
 
         cardapio.metodos.carregarEtapa(3);
         cardapio.metodos.carregarResumo();
@@ -473,8 +468,27 @@ cardapio.metodos = {
 
         });
 
-        $("#resumoEndereco").html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`);
-        $("#cidadeEndereco").html(`${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`);
+        if (!MEU_ENDERECO) {
+            cardapio.metodos.atualizarCampoHtml('#resumoEndereco', '');
+            cardapio.metodos.atualizarCampoHtml('#cidadeEndereco', '');
+            cardapio.metodos.finalizarPedido();
+            return;
+        }
+
+        const partesLinha1 = [MEU_ENDERECO.endereco, MEU_ENDERECO.numero, MEU_ENDERECO.bairro]
+            .filter((parte) => parte && parte.length > 0);
+        const enderecoLinha1 = partesLinha1.join(', ');
+        cardapio.metodos.atualizarCampoHtml('#resumoEndereco', enderecoLinha1);
+
+        const partesLinha2 = [];
+        if (MEU_ENDERECO.cep) {
+            partesLinha2.push(MEU_ENDERECO.cep);
+        }
+        if (MEU_ENDERECO.complemento) {
+            partesLinha2.push(MEU_ENDERECO.complemento);
+        }
+        const enderecoLinha2 = partesLinha2.join(' - ');
+        cardapio.metodos.atualizarCampoHtml('#cidadeEndereco', enderecoLinha2);
 
         cardapio.metodos.finalizarPedido();
 
@@ -487,10 +501,31 @@ cardapio.metodos = {
 
             var texto = 'Olá! gostaria de fazer um pedido:';
             texto += `\n*Itens do pedido:*\n\n\${itens}`;
-            texto += '\n*Endereço de entrega:*';
-            texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
-            texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
-            texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
+
+            const linha1Endereco = [MEU_ENDERECO.endereco, MEU_ENDERECO.numero, MEU_ENDERECO.bairro]
+                .filter((parte) => parte && parte.length > 0)
+                .join(', ');
+
+            const linha2Endereco = [MEU_ENDERECO.cep, MEU_ENDERECO.complemento]
+                .filter((parte) => parte && parte.length > 0)
+                .join(' - ');
+
+            const possuiEndereco = linha1Endereco.length > 0 || linha2Endereco.length > 0;
+
+            if (possuiEndereco) {
+                texto += '\n*Endereço de entrega:*';
+
+                if (linha1Endereco.length > 0) {
+                    texto += `\n${linha1Endereco}`;
+                }
+
+                if (linha2Endereco.length > 0) {
+                    texto += `\n${linha2Endereco}`;
+                }
+            }
+
+            const total = VALOR_CARRINHO;
+            texto += `\n\n*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
 
             var itens = '';
 
@@ -568,6 +603,72 @@ cardapio.metodos = {
                 $("#msg-" + id).remove();
             }, 800);
         }, tempo)
+
+    },
+
+    atualizarCampoTexto: (seletor, texto) => {
+
+        const elemento = $(seletor);
+
+        if (elemento.length) {
+            elemento.text(texto);
+        }
+
+    },
+
+    atualizarCampoHtml: (seletor, conteudo) => {
+
+        const elemento = $(seletor);
+
+        if (elemento.length) {
+            elemento.html(conteudo);
+        }
+
+    },
+
+    atualizarCampoValor: (seletor, valor) => {
+
+        const elemento = $(seletor);
+
+        if (elemento.length) {
+            elemento.val(valor);
+        }
+
+    },
+
+    focarCampo: (seletor) => {
+
+        const elemento = $(seletor);
+
+        if (elemento.length) {
+            elemento.focus();
+        }
+
+    },
+
+    obterValorInput: (seletor) => {
+
+        const elemento = $(seletor);
+
+        if (!elemento.length) {
+            return '';
+        }
+
+        const valor = elemento.val();
+
+        if (valor == null) {
+            return '';
+        }
+
+        if (typeof valor === 'string') {
+            return valor.trim();
+        }
+
+        if (Array.isArray(valor)) {
+            return valor.map((item) => (item == null ? '' : String(item).trim())).join(', ');
+        }
+
+        return String(valor).trim();
 
     }
 
