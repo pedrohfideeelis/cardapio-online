@@ -253,7 +253,7 @@ a.navbar-brand {
 }
 
 .card-item {
-  height: 360px;
+  min-height: 360px;
 }
 
 .card-item .img-produto img {
@@ -268,6 +268,15 @@ a.navbar-brand {
   overflow: hidden;
   height: 40px;
   margin-bottom: 0px;
+}
+
+.card-item .description-produto {
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 52px;
+  margin: 10px 0 0;
+  padding: 0 10px;
 }
 
 .card-item .price-produto {
@@ -326,6 +335,10 @@ a.navbar-brand {
 }
 
 .card-item:hover .title-produto {
+  display: none;
+}
+
+.card-item:hover .description-produto {
   display: none;
 }
 

@@ -40,6 +40,7 @@ cardapio.metodos = {
       let temp = cardapio.templates.item
         .replace(/\${img}/g, e.img)
         .replace(/\${nome}/g, e.name)
+        .replace(/\${descricao}/g, e.description || "")
         .replace(/\${preco}/g, e.price.toFixed(2).replace(".", ","))
         .replace(/\${id}/g, e.id);
 
@@ -604,6 +605,9 @@ cardapio.templates = {
                 </div>
                 <p class="title-produto text-center mt-4">
                     <b>\${nome}</b>
+                </p>
+                <p class="description-produto text-center mt-2">
+                    \${descricao}
                 </p>
                 <p class="price-produto text-center">
                     <b>R$ \${preco}</b>
