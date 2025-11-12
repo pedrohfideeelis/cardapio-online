@@ -243,7 +243,7 @@ var MENU = {
       img: "./img/cardapio/combo-marmitas.png",
       name: "Combo 5 Marmitas",
       description:
-        "5 marmitas por semana — opção prática e econômica para manter sua alimentação equilibrada",
+        "Opção prática e econômica para manter sua alimentação equilibrada",
       price: 99.9,
     },
   ],
