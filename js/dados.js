@@ -242,14 +242,6 @@ var MENU = {
       price: 28.9,
     },
     {
-      id: "linha-gourmet-caldo-abobora-gengibre-gorgonzola",
-      img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
-      name: "Caldo de Abóbora, Gengibre e Gorgonzola 500g",
-      description:
-        "Caldo cremoso de abóbora com toque de gengibre e queijo gorgonzola (peso total 500g)",
-      price: 26.9,
-    },
-    {
       id: "linha-gourmet-caldo-abobora-carne-seca",
       img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
       name: "Caldo de Abóbora com Carne Seca 500ml",
