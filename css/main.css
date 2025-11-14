@@ -146,21 +146,53 @@ a.navbar-brand {
   width: 50px;
 }
 
+.cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cta-social {
+  display: flex;
+  gap: 12px;
+}
+
+.banner .no-mobile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .card-banner {
   height: 450px;
   width: 450px;
   border-radius: 170px;
   background-color: var(--color-primary);
   position: absolute;
-  right: 0;
+  left: 50%;
   top: -80px;
+  transform: translateX(-50%);
 }
 
-.img-banner img {
+.banner .img-banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner .img-banner img {
   position: absolute;
   width: 430px;
-  right: 5px;
+  left: 50%;
   bottom: 50px;
+  transform: translateX(-50%);
 }
 
 .card {

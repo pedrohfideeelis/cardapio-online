@@ -63,6 +63,21 @@
     font-size: 18px;
   }
 
+  .cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cta-buttons {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .cta-social {
+    gap: 10px;
+  }
+
   .btn-icon-left span.icon-left {
     width: 43px;
     height: 43px;
