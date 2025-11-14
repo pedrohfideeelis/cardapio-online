@@ -100,7 +100,7 @@ a.navbar-brand {
 
 .text-banner h1 {
   color: var(--color-black);
-  font-size: 60px;
+  font-size: 52px;
 }
 
 .text-banner p {
@@ -204,6 +204,13 @@ a.navbar-brand {
   font-size: 40px;
   margin-top: 5px;
   margin-bottom: 30px;
+}
+
+.subtitle {
+  color: var(--color-text-out);
+  font-size: 18px;
+  margin-top: -10px;
+  margin-bottom: 35px;
 }
 
 .card-icon {
