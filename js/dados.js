@@ -253,7 +253,7 @@ var MENU = {
       id: "linha-gourmet-caldo-abobora-carne-seca",
       img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
       name: "Caldo de Abóbora com Carne Seca 500ml",
-      description: "Caldo cremoso de abóbora com carne seca desfiada (porção de 500ml)",
+      description: "Caldo cremoso de abóbora com carne seca desfiada",
       price: 26.9,
     },
     {
@@ -261,21 +261,21 @@ var MENU = {
       img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
       name: "Caldo de Abóbora Vegetariano 500ml",
       description:
-        "Versão vegetariana com mandioca e creme de soja para uma textura aveludada (porção de 500ml)",
+        "Versão vegetariana com mandioca e creme de soja para uma textura aveludada",
       price: 26.9,
     },
     {
       id: "linha-gourmet-caldo-mocoto-mandioca",
       img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
       name: "Caldo de Mocotó com Mandioca 500ml",
-      description: "Caldo tradicional de mocotó enriquecido com mandioca cremosa (porção de 500ml)",
+      description: "Caldo tradicional de mocotó enriquecido com mandioca cremosa",
       price: 26.9,
     },
     {
       id: "linha-gourmet-caldo-frango-mandioca",
       img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
       name: "Caldo de Frango com Mandioca 500ml",
-      description: "Caldo reconfortante de frango com mandioca cremosa (porção de 500ml)",
+      description: "Caldo reconfortante de frango com mandioca cremosa",
       price: 26.9,
     },
     {
@@ -283,14 +283,14 @@ var MENU = {
       img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
       name: "Caldo Verde 500ml",
       description:
-        "Clássico caldo verde com linguiça, calabresa e bacon defumado (porção de 500ml)",
+        "Clássico caldo verde com linguiça, calabresa e bacon defumado",
       price: 26.9,
     },
     {
       id: "linha-gourmet-feijoada",
       img: "./img/cardapio/linha-gourmet/feijoada.png",
       name: "Feijoada Gourmet 500g",
-      description: "Arroz + Couve refogada + Farofa de cebola (peso total 500g)",
+      description: "Arroz + Couve refogada + Farofa de cebola",
       price: 28.9,
     },
     {
@@ -298,21 +298,21 @@ var MENU = {
       img: "./img/cardapio/linha-gourmet/espaguete-funcional.png",
       name: "Espaguete Funcional com Picadinho de Alcatra 500g",
       description:
-        "Espaguete de cenoura e abobrinha + Picadinho de alcatra com molho pesto de rúcula e manjericão (peso total 500g)",
+        "Espaguete de cenoura e abobrinha + Picadinho de alcatra com molho pesto de rúcula e manjericão",
       price: 28.9,
     },
     {
       id: "linha-gourmet-strogonoff-frango",
       img: "./img/cardapio/linha-gourmet/strogonoff-frango.png",
       name: "Strogonoff de Frango 400g",
-      description: "Strogonoff de frango (250g) + Arroz branco (150g) (peso total 400g)",
+      description: "Strogonoff de frango (250g) + Arroz branco (150g)",
       price: 28.9,
     },
     {
       id: "linha-gourmet-strogonoff-arroz-brocolis",
       img: "./img/cardapio/linha-gourmet/strogonoff-arroz-brocolis.png",
       name: "Strogonoff com Arroz de Brócolis 400g",
-      description: "Strogonoff de frango (250g) + Arroz de brócolis (150g) (peso total 400g)",
+      description: "Strogonoff de frango (250g) + Arroz de brócolis (150g)",
       price: 28.9,
     },
   ],
@@ -331,7 +331,7 @@ var MENU = {
       img: "./img/cardapio/combo-marmitas.png",
       name: "Combo 10 Marmitas",
       description:
-        "Seleção com 10 marmitas das linhas Equilíbrio e Dia a Dia para a semana inteira",
+        "Seleção com 10 marmitas das linhas Equilíbrio e/ou Dia a Dia para a semana inteira",
       price: 220.0,
     },
     {
@@ -339,7 +339,7 @@ var MENU = {
       img: "./img/cardapio/combo-marmitas-sucos.png",
       name: "Combo 5 Marmitas + 5 Sucos",
       description:
-        "Marmitas somente das linhas Equilíbrio e Dia a Dia acompanhadas de 5 sucos naturais",
+        "Marmitas somente das linhas Equilíbrio e/ou Dia a Dia acompanhadas de 5 sucos naturais",
       price: 159.5,
     },
     {
@@ -347,7 +347,7 @@ var MENU = {
       img: "./img/cardapio/combo-marmitas-sucos.png",
       name: "Combo 10 Marmitas + 10 Sucos",
       description:
-        "Inclui 10 marmitas somente das linhas Equilíbrio e Dia a Dia com 10 sucos naturais",
+        "Inclui 10 marmitas somente das linhas Equilíbrio e/ou Dia a Dia com 10 sucos naturais",
       price: 309.0,
     },
   ],
