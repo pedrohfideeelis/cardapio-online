@@ -150,7 +150,7 @@ a.navbar-brand {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 43px;
   margin-top: 30px;
 }
 
@@ -191,7 +191,7 @@ a.navbar-brand {
   position: absolute;
   width: 430px;
   left: 50%;
-  bottom: 50px;
+  bottom: 110px;
   transform: translateX(-50%);
 }
 
