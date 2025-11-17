@@ -357,7 +357,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-10-marmitas-10-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-10-marmitas-10-sucos.png",
       name: "Combo 10 Marmitas + 10 Sucos",
       description:
         "Inclui 10 marmitas somente das linhas Equilíbrio e/ou Dia a Dia com 10 sucos naturais",
@@ -365,7 +365,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-5-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-5-sucos.png",
       name: "Combo 5 Sucos",
       description:
         "Inclui 5 sucos (Escolha sua combinação entre: Detox da Casa, Antiox da Nara e/ou Shot Dia a Dia",
@@ -373,7 +373,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-10-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-10-sucos.png",
       name: "Combo 10 Sucos",
       description:
         "Inclui 10 sucos (Escolha sua combinação entre: Detox da Casa, Antiox da Nara e/ou Shot Dia a Dia",
