@@ -11,9 +11,9 @@ var MENU = {
     {
       id: "linha-equilibrio-frango-pure-batata-doce",
       img: "./img/cardapio/linha-equilibrio/frango-pure-doce.png",
-      name: "Frango com Purê de Batata Doce 450g",
+      name: "Frango com Purê 450g",
       description:
-        "Purê de batata doce (200g) + Filé de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Filé de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -27,9 +27,9 @@ var MENU = {
     {
       id: "linha-equilibrio-ragu-frango-pure-doce",
       img: "./img/cardapio/linha-equilibrio/ragu-frango-pure-doce.png",
-      name: "Ragu de Frango com Purê de Batata Doce 450g",
+      name: "Ragu de Frango com Purê 450g",
       description:
-        "Purê de batata doce (200g) + Ragu de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Ragu de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -43,9 +43,9 @@ var MENU = {
     {
       id: "linha-equilibrio-picadinho-pure-doce",
       img: "./img/cardapio/linha-equilibrio/picadinho-bovino-pure-doce.png",
-      name: "Picadinho com Purê de Batata Doce 450g",
+      name: "Picadinho com Purê 450g",
       description:
-        "Purê de batata doce (200g) + Picadinho de carne bovina (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Picadinho de carne bovina (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -59,9 +59,9 @@ var MENU = {
     {
       id: "linha-equilibrio-carne-moida-pure-doce",
       img: "./img/cardapio/linha-equilibrio/carne-moida-pure-doce.png",
-      name: "Carne Moída com Purê de Batata Doce 450g",
+      name: "Carne Moída com Purê 450g",
       description:
-        "Purê de batata doce (200g) + Carne moída (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Carne moída (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -75,9 +75,9 @@ var MENU = {
     {
       id: "linha-equilibrio-almondega-pure-doce",
       img: "./img/cardapio/linha-equilibrio/almondegas-pure-doce.png",
-      name: "Almôndega com Purê de Batata Doce 450g",
+      name: "Almôndega com Purê 450g",
       description:
-        "Purê de batata doce (200g) + Almôndega com molho de tomate (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Almôndega com molho de tomate (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -112,7 +112,7 @@ var MENU = {
       img: "./img/cardapio/linha-dia-dia/frango-pure.png",
       name: "Frango com Purê e Legumes 450g",
       description:
-        "Purê de batata inglesa (200g) + Feijão (50g) + Filé de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Feijão (50g) + Filé de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -128,7 +128,7 @@ var MENU = {
       img: "./img/cardapio/linha-dia-dia/ragu-pure.png",
       name: "Ragu com Purê e Legumes 450g",
       description:
-        "Purê de batata inglesa (200g) + Feijão (50g) + Ragu de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Feijão (50g) + Ragu de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -144,7 +144,7 @@ var MENU = {
       img: "./img/cardapio/linha-dia-dia/picadinho-pure.png",
       name: "Picadinho com Purê e Legumes 450g",
       description:
-        "Purê de batata inglesa (200g) + Feijão (50g) + Picadinho de carne bovina (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Feijão (50g) + Picadinho de carne bovina (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -160,7 +160,7 @@ var MENU = {
       img: "./img/cardapio/linha-dia-dia/carne-moida-pure.png",
       name: "Carne Moída com Purê e Legumes 450g",
       description:
-        "Purê de batata inglesa (200g) + Feijão (50g) + Carne moída (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Feijão (50g) + Carne moída (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -174,9 +174,9 @@ var MENU = {
     {
       id: "linha-dia-a-dia-almondega-pure-batata",
       img: "./img/cardapio/linha-dia-dia/almondega-pure.png",
-      name: "Almôndega com Purê de Batata 450g",
+      name: "Almôndega com Purê 450g",
       description:
-        "Purê de batata inglesa (200g) + Feijão (50g) + Almôndega com molho de tomate (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Feijão (50g) + Almôndega com molho de tomate (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
