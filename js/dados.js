@@ -243,14 +243,14 @@ var MENU = {
     },
     {
       id: "linha-gourmet-caldo-abobora-carne-seca",
-      img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
+      img: "./img/cardapio/linha-gourmet/caldo-de-abobora-carne-seca.png",
       name: "Caldo de Abóbora com Carne Seca 500ml",
       description: "Caldo cremoso de abóbora com carne seca desfiada",
       price: 26.9,
     },
     {
       id: "linha-gourmet-caldo-abobora-vegetariano",
-      img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
+      img: "./img/cardapio/linha-gourmet/caldo-de-abobora-veg.png",
       name: "Caldo de Abóbora Vegetariano 500ml",
       description:
         "Versão vegetariana com mandioca e creme de soja para uma textura aveludada",
@@ -258,21 +258,21 @@ var MENU = {
     },
     {
       id: "linha-gourmet-caldo-mocoto-mandioca",
-      img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
+      img: "./img/cardapio/linha-gourmet/caldo-de-mocoto.png",
       name: "Caldo de Mocotó com Mandioca 500ml",
       description: "Caldo tradicional de mocotó enriquecido com mandioca cremosa",
       price: 26.9,
     },
     {
       id: "linha-gourmet-caldo-frango-mandioca",
-      img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
+      img: "./img/cardapio/linha-gourmet/caldo-de-mandioca-frango.png",
       name: "Caldo de Frango com Mandioca 500ml",
       description: "Caldo reconfortante de frango com mandioca cremosa",
       price: 26.9,
     },
     {
       id: "linha-gourmet-caldo-verde",
-      img: "./img/cardapio/linha-gourmet/caldo-de-abobora.png",
+      img: "./img/cardapio/linha-gourmet/caldo-verde.png",
       name: "Caldo Verde 500ml",
       description:
         "Clássico caldo verde com linguiça, calabresa e bacon defumado",
@@ -306,6 +306,27 @@ var MENU = {
       name: "Strogonoff com Arroz de Brócolis 400g",
       description: "Strogonoff de frango (250g) + Arroz de brócolis (150g)",
       price: 28.9,
+    },
+    {
+      id: "linha-gourmet-suco-detox",
+      img: "./img/cardapio/linha-gourmet/suco-detox.png",
+      name: "Suco Detox da Casa (200ml)",
+      description: "Abacaxi + Couve + Cenoura + Hortelã + Laranja + Gengibre + Água de Coco + Linhaça (Sem conservantes e sem adição de açúcares)",
+      price: 9.9,
+    },
+    {
+      id: "linha-gourmet-suco-antiox",
+      img: "./img/cardapio/linha-gourmet/suco-antiox.png",
+      name: "Suco Antiox da Nara (200ml)",
+      description: "Beterraba + Cenoura + Maçã + Gengibre + Linhaça (Sem conservantes e sem adição de açúcares)",
+      price: 9.9,
+    },
+    {
+      id: "linha-gourmet-suco-dia-dia",
+      img: "./img/cardapio/linha-gourmet/suco-antiox.png",
+      name: "Shot Dia a Dia (200ml)",
+      description: "Cenoura + Maçã + Laranja + Gengibre + Água de Coco (Sem conservantes e sem adição de açúcares)",
+      price: 9.9,
     },
   ],
 
@@ -341,6 +362,22 @@ var MENU = {
       description:
         "Inclui 10 marmitas somente das linhas Equilíbrio e/ou Dia a Dia com 10 sucos naturais",
       price: 309.0,
+    },
+    {
+      id: "combos-especiais-5-sucos",
+      img: "./img/cardapio/combo-marmitas-sucos.png",
+      name: "Combo 5 Sucos",
+      description:
+        "Inclui 5 sucos (Escolha sua combinação entre: Detox da Casa, Antiox da Nara e/ou Shot Dia a Dia",
+      price: 44.5,
+    },
+    {
+      id: "combos-especiais-10-sucos",
+      img: "./img/cardapio/combo-marmitas-sucos.png",
+      name: "Combo 10 Sucos",
+      description:
+        "Inclui 10 sucos (Escolha sua combinação entre: Detox da Casa, Antiox da Nara e/ou Shot Dia a Dia",
+      price: 89.0,
     },
   ],
 };
