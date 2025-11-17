@@ -323,7 +323,7 @@ var MENU = {
     },
     {
       id: "linha-gourmet-suco-dia-dia",
-      img: "./img/cardapio/linha-gourmet/suco-antiox.png",
+      img: "./img/cardapio/linha-gourmet/shot-dia-dia.png",
       name: "Shot Dia a Dia (200ml)",
       description: "Cenoura + Maçã + Laranja + Gengibre + Água de Coco (Sem conservantes e sem adição de açúcares)",
       price: 9.9,
@@ -333,7 +333,7 @@ var MENU = {
   combosEspeciais: [
     {
       id: "combos-especiais-5-marmitas",
-      img: "./img/cardapio/combo-marmitas.png",
+      img: "./img/cardapio/combo-5-marmitas.png",
       name: "Combo 5 Marmitas",
       description:
         "Opção prática e econômica para manter sua alimentação equilibrada",
@@ -341,7 +341,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-10-marmitas",
-      img: "./img/cardapio/combo-marmitas.png",
+      img: "./img/cardapio/combo-10-marmitas.png",
       name: "Combo 10 Marmitas",
       description:
         "Seleção com 10 marmitas das linhas Equilíbrio e/ou Dia a Dia para a semana inteira",
@@ -349,7 +349,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-5-marmitas-5-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-5-marmitas-5-sucos.png",
       name: "Combo 5 Marmitas + 5 Sucos",
       description:
         "Marmitas somente das linhas Equilíbrio e/ou Dia a Dia acompanhadas de 5 sucos naturais",
@@ -357,7 +357,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-10-marmitas-10-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-10-marmitas-10-sucos.png",
       name: "Combo 10 Marmitas + 10 Sucos",
       description:
         "Inclui 10 marmitas somente das linhas Equilíbrio e/ou Dia a Dia com 10 sucos naturais",
@@ -365,7 +365,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-5-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-5-sucos.png",
       name: "Combo 5 Sucos",
       description:
         "Inclui 5 sucos (Escolha sua combinação entre: Detox da Casa, Antiox da Nara e/ou Shot Dia a Dia",
@@ -373,7 +373,7 @@ var MENU = {
     },
     {
       id: "combos-especiais-10-sucos",
-      img: "./img/cardapio/combo-marmitas-sucos.png",
+      img: "./img/cardapio/combo-10-sucos.png",
       name: "Combo 10 Sucos",
       description:
         "Inclui 10 sucos (Escolha sua combinação entre: Detox da Casa, Antiox da Nara e/ou Shot Dia a Dia",
