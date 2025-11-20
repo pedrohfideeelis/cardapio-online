@@ -110,6 +110,7 @@
   .img-produto {
     position: absolute;
     left: 15px;
+    top: 15px;
   }
 
   .card-item {
@@ -146,6 +147,7 @@
 
   .card-item .add-carrinho {
     margin-top: 5px;
+    display: flex;
   }
 
   #itensCardapio .mb-5 {
