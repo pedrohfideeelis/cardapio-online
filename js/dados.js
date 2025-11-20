@@ -5,7 +5,7 @@ var MENU = {
       img: "./img/cardapio/linha-equilibrio/frango-integral.png",
       name: "Frango com Arroz Integral 400g",
       description:
-        "Arroz integral (150g) + Filé de frango (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Arroz integral (150g) + Filé de frango (150g) + Mix de legumes (100g)",
       price: 24.9,
     },
     {
