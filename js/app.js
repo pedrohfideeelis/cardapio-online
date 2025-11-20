@@ -23,18 +23,21 @@ cardapio.eventos = {
 cardapio.metodos = {
   // obtem a lista de itens do cardápio
   obterItensCardapio: (categoria = "linhaEquilibrio", vermais = false) => {
+    const isMobile = window.innerWidth <= 767;
     var filtro = MENU[categoria];
     console.log(filtro);
 
     if (!vermais) {
       $("#itensCardapio").html("");
 
-      if (CATEGORIAS_SEM_VERMAIS.includes(categoria)) {
+      if (isMobile || CATEGORIAS_SEM_VERMAIS.includes(categoria)) {
         $("#btnVerMais").addClass("hidden");
       } else {
         $("#btnVerMais").removeClass("hidden");
       }
     }
+
+    const mostrarTodos = isMobile || vermais;
 
     $.each(filtro, (i, e) => {
       let temp = cardapio.templates.item
@@ -45,12 +48,12 @@ cardapio.metodos = {
         .replace(/\${id}/g, e.id);
 
       // botão ver mais foi clicado (12 itens)
-      if (vermais && i >= 8) {
+      if (mostrarTodos && vermais && i >= 8) {
         $("#itensCardapio").append(temp);
       }
 
       // paginação inicial (8 itens)
-      if (!vermais && i < 8) {
+      if (mostrarTodos || (!vermais && i < 8)) {
         $("#itensCardapio").append(temp);
       }
     });
