@@ -169,6 +169,10 @@
     margin-bottom: 15px !important;
   }
 
+  #btnVerMais {
+    display: none;
+  }
+
   .depoimentos {
     padding-bottom: 50px;
   }
