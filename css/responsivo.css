@@ -110,6 +110,7 @@
   .img-produto {
     position: absolute;
     left: 15px;
+    top: 15px;
   }
 
   .card-item {
@@ -146,6 +147,22 @@
 
   .card-item .add-carrinho {
     margin-top: 5px;
+    display: flex;
+  }
+
+  #itensCardapio {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  #itensCardapio > div {
+    flex: 0 0 80%;
+    max-width: 80%;
+    scroll-snap-align: start;
   }
 
   #itensCardapio .mb-5 {
