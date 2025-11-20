@@ -30,6 +30,8 @@ cardapio.metodos = {
     if (!vermais) {
       $("#itensCardapio").html("");
 
+      $("#itensCardapio").scrollLeft(0);
+
       if (isMobile || CATEGORIAS_SEM_VERMAIS.includes(categoria)) {
         $("#btnVerMais").addClass("hidden");
       } else {
