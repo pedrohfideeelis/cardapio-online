@@ -54,8 +54,12 @@ cardapio.metodos = {
         $("#itensCardapio").append(temp);
       }
 
-      // paginação inicial (8 itens)
-      if (mostrarTodos || (!vermais && i < 8)) {
+      // paginação inicial (8 itens) e listagem completa em mobile
+      if (mostrarTodos && !vermais) {
+        $("#itensCardapio").append(temp);
+      }
+
+      if (!mostrarTodos && i < 8) {
         $("#itensCardapio").append(temp);
       }
     });
