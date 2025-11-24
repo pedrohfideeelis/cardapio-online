@@ -176,7 +176,7 @@ var MENU = {
       img: "./img/cardapio/linha-dia-dia/almondega-pure.png",
       name: "Almôndega com Purê 450g",
       description:
-        "Purê de abóbora, batata doce ou batata inglesa (200g) + Feijão (50g) + Almôndega com molho de tomate (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Almôndega com molho de tomate (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
     {
@@ -196,11 +196,27 @@ var MENU = {
       price: 24.9,
     },
     {
+      id: "linha-dia-a-dia-carne-panela-pure",
+      img: "./img/cardapio/linha-dia-dia/carnel-de-panela-pure.png",
+      name: "Carne de Panela com Purê 500g",
+      description:
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Carne de panela (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+      price: 24.9,
+    },
+    {
       id: "linha-dia-a-dia-file-maca-arroz-feijao",
       img: "./img/cardapio/linha-dia-dia/file-molho-maca.png",
       name: "Filé ao Molho de Maçã com Arroz e Feijão 500g",
       description:
         "Arroz de açafrão (150g) + Feijão (100g) + Filé suíno ao molho de maçã (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
+      price: 24.9,
+    },
+    {
+      id: "linha-dia-a-dia-file-maca-pure",
+      img: "./img/cardapio/linha-dia-dia/file-molho-maca-pure.png",
+      name: "Filé ao Molho de Maçã com Purê 500g",
+      description:
+        "Purê de abóbora, batata doce ou batata inglesa (200g) + Filé suíno ao molho de maçã (150g) + Mix de legumes (100g - Beterraba, cenoura, batata-doce, chuchu, abobrinha, couve-flor, brócolis, batata inglesa e vagem)",
       price: 24.9,
     },
   ],
@@ -310,21 +326,21 @@ var MENU = {
     {
       id: "linha-gourmet-suco-detox",
       img: "./img/cardapio/linha-gourmet/suco-detox.png",
-      name: "Suco Detox da Casa (200ml)",
+      name: "Suco Detox da Casa (400ml)",
       description: "Abacaxi + Couve + Cenoura + Hortelã + Laranja + Gengibre + Água de Coco + Linhaça (Sem conservantes e sem adição de açúcares)",
       price: 9.9,
     },
     {
       id: "linha-gourmet-suco-antiox",
       img: "./img/cardapio/linha-gourmet/suco-antiox.png",
-      name: "Suco Antiox da Nara (200ml)",
+      name: "Suco Antiox da Nara (300ml)",
       description: "Beterraba + Cenoura + Maçã + Gengibre + Linhaça (Sem conservantes e sem adição de açúcares)",
       price: 9.9,
     },
     {
       id: "linha-gourmet-suco-dia-dia",
       img: "./img/cardapio/linha-gourmet/shot-dia-dia.png",
-      name: "Shot Dia a Dia (200ml)",
+      name: "Shot Dia a Dia (400ml)",
       description: "Cenoura + Maçã + Laranja + Gengibre + Água de Coco (Sem conservantes e sem adição de açúcares)",
       price: 9.9,
     },
